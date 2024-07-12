@@ -1,1 +1,3 @@
 site_name: LangSmith Course
+theme:
+  name: dracula
