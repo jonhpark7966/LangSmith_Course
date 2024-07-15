@@ -10,22 +10,20 @@
       
       
       
-        <link rel="next" href="intros/LangSmith/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
-        <title>LangSmith Course</title>
+        <title>Datasets & Evaluation 컨셉 가이드 - LangSmith Course</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,14 +42,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -60,7 +58,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-langsmith-course" class="md-skip">
+        <a href="#datasets-evaluation" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to LangSmith Course
+              Datasets &amp; Evaluation 컨셉 가이드
             
           </span>
         </div>
@@ -216,7 +214,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -231,30 +229,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to LangSmith Course
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,35 +241,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      길라잡이
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -345,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LangSmith/" class="md-nav__link">
+      <a href="../LangSmith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LLMOps/" class="md-nav__link">
+      <a href="../LLMOps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Setup/" class="md-nav__link">
+      <a href="../../tutorial/Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_1/" class="md-nav__link">
+      <a href="../../tutorial/Tracing_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_2/" class="md-nav__link">
+      <a href="../../tutorial/Tracing_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Datasets/" class="md-nav__link">
+      <a href="../../tutorial/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Evaluation/" class="md-nav__link">
+      <a href="../../tutorial/Evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FAQ/" class="md-nav__link">
+      <a href="../../FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,9 +648,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      길라잡이
+      생성 방법에 따른 데이터 분류
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langsmith" class="md-nav__link">
+    <span class="md-ellipsis">
+      LangSmith 의 데이터 타입
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 셋 나누기
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation (평가)
     </span>
   </a>
   
@@ -722,32 +713,41 @@
                   
 
 
-<h1 id="welcome-to-langsmith-course">Welcome to LangSmith Course</h1>
-<p>랭스미스 강의에 오신 것을 환영 합니다 !!!<br />
-좌측 컨텐츠 네비게이션과 길라잡이를 확인하셔서 따라가시는 것을 추천드립니다.<br />
-유투브 영상으로 강의 제작 예정입니다</p>
-<h2 id="_1">길라잡이</h2>
-<ol>
-<li>직접 코딩하는 개발자는 아니다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a> 가이드 까지만 보시면 됩니다.</li>
-</ul>
-</li>
-<li>LangChain 사용 경험이 있거나, RAG 와 같은 기법이 익숙하다!<ul>
-<li><a href="tutorial/Setup/">튜토리얼</a>을 사전처럼 활용하시고, Setup 이후에 실전으로 바로 가시면 됩니다.</li>
-</ul>
-</li>
-<li>LLM 어플리케이션을 처음 접하는 개발자다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a>, <a href="tutorial/Setup/">튜토리얼</a>, 실전 순으로 차례대로 익히시면 됩니다.</li>
-</ul>
-</li>
-<li>LLM, Embeddings 에 대해 생소하다!<ul>
-<li><a href="https://platform.openai.com/docs/introduction">OpenAI cookbook</a> 또는 <a href="https://python.langchain.com/v0.2/docs/introduction/">LangChain 튜토리얼</a> 부터 보고 오시는 것을 추천 드립니다.</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>본 컨텐츠들은 제가 직접 작성하였으며, GPT 와 같은 LLM 의 도움을 받지 않았습니다. 제가 공부하려고 작성한 것이라서요.</p>
-</blockquote>
+<h1 id="datasets-evaluation">Datasets &amp; Evaluation 컨셉 가이드</h1>
+<p>LLM 어플리케이션을 평가하기 위한 데이터셋과 평가 방법 입니다.
+데이터셋을 준비해두고, LangSmith 에 적재해둔 다음 Evaluator 에 보내줍니다.
+Evaluator는 LLM 어플리케이션의 결과와 데이터에 준비된 결과를 보고 평가합니다.
+여기서 Dataset 의 Output (정답) 은 필수 사항이 아닙니다.
+정답이 있으면 좋겠지만, 없어도 평가를 할수는 있죠.</p>
+<p><a class="glightbox" href="rsc/dataset_evaluation_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="rsc/dataset_evaluation_1.png" /></a></p>
+<h2 id="datasets">Datasets</h2>
+<p>LangSmith 에서는 주요한 데이터셋을 다룰 수 있습니다.
+단순 저장소이기 때문에 "이걸 왜 설명하지?" 라고 하실 수 있겠지만,
+Tracing (추적) 이나, Evaluation (평가) 기능과 연동되어 동작하기 때문에 매우 유용합니다.</p>
+<h3 id="_1">생성 방법에 따른 데이터 분류</h3>
+<p>데이터셋의 생성은 다음과 같은 방법으로 할 수 있습니다.
+- 연구/개발자가 직접 작성 또는 선정한 데이터
+    - Input 과 예상 Output을 직접 작성합니다. 문제집과 정답이죠. 수십개 수준정도로 데이터의 양이 작더라도 기준이 되는 데이터셋이기 때문에 중요합니다.
+- 로깅된 데이터
+    - LLM 어플리케이션이 서비스가 시작되었다면, 사용자의 tracing 결과들이 로그가 되어 데이터셋으로 편입될 수 있습니다. 실제 사용 예시이고, 사용자 피드백이 같이 있다면 더 가치있는 데이터가 됩니다.
+- 합성 데이터
+    - LLM 어플리케이션을 이용해서 직접 생성해낼 수 도 있습니다. 사람이 직접 검토하지 않는다면, 데이터가 저품질일 위험성이 있지만, 자동 생성되어서 양을 많이 늘릴 수 있습니다.</p>
+<p>LangSmith 플랫폼은 위 3가지 방법으로 생성되는 데이터를 모두 쉽게 데이터셋에 추가할 수 있게 지원합니다.</p>
+<h3 id="langsmith">LangSmith 의 데이터 타입</h3>
+<p>LangSmith 에서는 아래 3가지 타입으로 데이터가 구분됩니다.
+- kv (key-value)
+    - 일반적인 딕셔너리 형태와 같습니다. 가장 범용적이고, 다양한 evaluation 시나리오를 커버합니다.
+    - 기본 타입이기도하고, 그냥 kv 타입 사용하면 웬만하면 됩니다.
+- llm (large language model)
+    - "completion" 스타일의 llm 평가를 위해 사용됩니다.
+- chat
+    - 채팅 스타일로 챗봇과 같은 대화 스타일 평가를 위해 사용됩니다.</p>
+<h3 id="_2">데이터 셋 나누기</h3>
+<p>용도에 따라 데이터셋을 나눌 수 있습니다.<br />
+작고 빠른 테스트용, 풀 테스트용 과 같이 테스트 규모에 따라서 나눌 수 있습니다.<br />
+팩트 체크용 이라던가, 의견 제시용 이라던가, 다양한 task 를 수행해야하는 경우 task 별로 나누기도 합니다.  </p>
+<h2 id="evaluation">Evaluation (평가)</h2>
+<p>TBD.</p>
 
 
 
@@ -773,28 +773,6 @@
         <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-        
-          
-          <a href="intros/LangSmith/" class="md-footer__link md-footer__link--next" aria-label="Next: LangSmith는 무엇인가요?">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                LangSmith는 무엇인가요?
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -818,10 +796,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

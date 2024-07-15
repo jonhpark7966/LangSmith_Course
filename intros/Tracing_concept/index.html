@@ -10,22 +10,20 @@
       
       
       
-        <link rel="next" href="intros/LangSmith/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
-        <title>LangSmith Course</title>
+        <title>Tracing 컨셉 가이드 - LangSmith Course</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,14 +42,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -60,7 +58,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-langsmith-course" class="md-skip">
+        <a href="#tracing" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to LangSmith Course
+              Tracing 컨셉 가이드
             
           </span>
         </div>
@@ -216,7 +214,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -231,30 +229,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to LangSmith Course
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,35 +241,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      길라잡이
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -345,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LangSmith/" class="md-nav__link">
+      <a href="../LangSmith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LLMOps/" class="md-nav__link">
+      <a href="../LLMOps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Setup/" class="md-nav__link">
+      <a href="../../tutorial/Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_1/" class="md-nav__link">
+      <a href="../../tutorial/Tracing_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_2/" class="md-nav__link">
+      <a href="../../tutorial/Tracing_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Datasets/" class="md-nav__link">
+      <a href="../../tutorial/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Evaluation/" class="md-nav__link">
+      <a href="../../tutorial/Evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FAQ/" class="md-nav__link">
+      <a href="../../FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,9 +648,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#run" class="md-nav__link">
     <span class="md-ellipsis">
-      길라잡이
+      Run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback
     </span>
   </a>
   
@@ -722,32 +698,42 @@
                   
 
 
-<h1 id="welcome-to-langsmith-course">Welcome to LangSmith Course</h1>
-<p>랭스미스 강의에 오신 것을 환영 합니다 !!!<br />
-좌측 컨텐츠 네비게이션과 길라잡이를 확인하셔서 따라가시는 것을 추천드립니다.<br />
-유투브 영상으로 강의 제작 예정입니다</p>
-<h2 id="_1">길라잡이</h2>
-<ol>
-<li>직접 코딩하는 개발자는 아니다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a> 가이드 까지만 보시면 됩니다.</li>
+<h1 id="tracing">Tracing 컨셉 가이드</h1>
+<p>LangSmith 에서 고안한 Tracing 컨셉 가이드 입니다.<br />
+LangSmith는 Project &gt;&gt; Trace &gt;&gt; Run  단위로 데이터를 관리합니다.</p>
+<p><a class="glightbox" href="rsc/tracing_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="rsc/tracing_tree.png" /></a></p>
+<h2 id="run">Run</h2>
+<ul>
+<li>하나의 In, 하나의 Out 입니다.</li>
 </ul>
-</li>
-<li>LangChain 사용 경험이 있거나, RAG 와 같은 기법이 익숙하다!<ul>
-<li><a href="tutorial/Setup/">튜토리얼</a>을 사전처럼 활용하시고, Setup 이후에 실전으로 바로 가시면 됩니다.</li>
+<h2 id="trace">Trace</h2>
+<ul>
+<li>사용자 입장에서의 하나의 In, 하나의 Out 입니다.</li>
+<li>예를 들어 RAG 라고 가정하면, Retrieve 가 하나의 Run, Generation이 하나의 Run 이라 합쳐서 하나의 Trace 입니다.</li>
 </ul>
-</li>
-<li>LLM 어플리케이션을 처음 접하는 개발자다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a>, <a href="tutorial/Setup/">튜토리얼</a>, 실전 순으로 차례대로 익히시면 됩니다.</li>
+<p>아래 보는 것과 같이 일반적인 LLM 어플리케이션은 여러개의 Run이 모여 하나의 Trace 가 되겠죠.</p>
+<p><a class="glightbox" href="rsc/trace_run.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="rsc/trace_run.png" /></a></p>
+<h2 id="project">Project</h2>
+<ul>
+<li>여러 개의 Trace 들 모음으로 운영자가 관리하는 단위입니다.</li>
+<li>추적 기능을 활성화 할때, Project를 지정할 수 있습니다.</li>
 </ul>
-</li>
-<li>LLM, Embeddings 에 대해 생소하다!<ul>
-<li><a href="https://platform.openai.com/docs/introduction">OpenAI cookbook</a> 또는 <a href="https://python.langchain.com/v0.2/docs/introduction/">LangChain 튜토리얼</a> 부터 보고 오시는 것을 추천 드립니다.</li>
-</ul>
-</li>
-</ol>
+<h2 id="feedback">Feedback</h2>
+<p>각각의 Run 에 피드백을 수집할 수 있습니다.
+- 사용자가 피드백을 같이 날려줄 수가 있습니다.
+- LangSmith 에서 운영자가 직접 달아 줄 수 있습니다.
+- Evaluation 과정을 자동화해서 프로그램이 달아 줄 수 있습니다.</p>
+<p>아래의 경우는 사용자가 피드백을 챗봇 어플리케이션에서 마킹 해준 경우 입니다. API 를 통해 수집 되었습니다.</p>
+<p><a class="glightbox" href="rsc/feedback.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="rsc/feedback.png" /></a></p>
+<h1 id="tag-metadata">Tag &amp; Metadata</h1>
+<p>이 외에도 태그랑 메타데이터를 추가로 달아줄 수 있습니다. 추가 정보를 달아 주는 개념이로 일반적인 데이터 관리에서의 태그랑 메타데이터와 개념이 같습니다. 역시 직접 LangSmith에서 달아줄 수도 있고, LLM 어플리케이션에서 같이 달아 줄 수도 있습니다.</p>
 <blockquote>
-<p>본 컨텐츠들은 제가 직접 작성하였으며, GPT 와 같은 LLM 의 도움을 받지 않았습니다. 제가 공부하려고 작성한 것이라서요.</p>
+<p>LangSmith 클라우드 서비스는 400일간 데이터를 보관해 줍니다. 그 이후에는 날라간다고 하네요.</p>
 </blockquote>
+<h2 id="_1">참조</h2>
+<ul>
+<li><a href="https://docs.smith.langchain.com/concepts/tracing">LangSmith 공식 문서</a></li>
+</ul>
 
 
 
@@ -773,28 +759,6 @@
         <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-        
-          
-          <a href="intros/LangSmith/" class="md-footer__link md-footer__link--next" aria-label="Next: LangSmith는 무엇인가요?">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                LangSmith는 무엇인가요?
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -818,10 +782,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

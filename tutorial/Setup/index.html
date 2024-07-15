@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../../tbd/">
       
-        <link rel="next" href="intros/LangSmith/">
+      
+        <link rel="next" href="../Tracing_1/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
-        <title>LangSmith Course</title>
+        <title>Setup & Quick Start - LangSmith Course</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,14 +46,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -60,7 +62,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -79,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-langsmith-course" class="md-skip">
+        <a href="#setup-quick-start" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +97,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-header__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -115,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to LangSmith Course
+              Setup &amp; Quick Start
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
+    <a href="../.." title="LangSmith Course" class="md-nav__button md-logo" aria-label="LangSmith Course" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -231,30 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to LangSmith Course
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,35 +245,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      길라잡이
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -345,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LangSmith/" class="md-nav__link">
+      <a href="../../intros/LangSmith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intros/LLMOps/" class="md-nav__link">
+      <a href="../../intros/LLMOps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,8 +365,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -423,13 +378,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -443,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
@@ -454,10 +407,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="tutorial/Setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setup &amp; Quick Start
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -466,6 +439,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      API key 발급
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      설치
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -478,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_1/" class="md-nav__link">
+      <a href="../Tracing_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Tracing_2/" class="md-nav__link">
+      <a href="../Tracing_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Datasets/" class="md-nav__link">
+      <a href="../Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/Evaluation/" class="md-nav__link">
+      <a href="../Evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tbd/" class="md-nav__link">
+      <a href="../../tbd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FAQ/" class="md-nav__link">
+      <a href="../../FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,9 +719,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      API key 발급
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      길라잡이
+      설치
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
     </span>
   </a>
   
@@ -722,32 +760,64 @@
                   
 
 
-<h1 id="welcome-to-langsmith-course">Welcome to LangSmith Course</h1>
-<p>랭스미스 강의에 오신 것을 환영 합니다 !!!<br />
-좌측 컨텐츠 네비게이션과 길라잡이를 확인하셔서 따라가시는 것을 추천드립니다.<br />
-유투브 영상으로 강의 제작 예정입니다</p>
-<h2 id="_1">길라잡이</h2>
-<ol>
-<li>직접 코딩하는 개발자는 아니다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a> 가이드 까지만 보시면 됩니다.</li>
-</ul>
-</li>
-<li>LangChain 사용 경험이 있거나, RAG 와 같은 기법이 익숙하다!<ul>
-<li><a href="tutorial/Setup/">튜토리얼</a>을 사전처럼 활용하시고, Setup 이후에 실전으로 바로 가시면 됩니다.</li>
-</ul>
-</li>
-<li>LLM 어플리케이션을 처음 접하는 개발자다!<ul>
-<li><a href="intros/LangSmith/">컨셉</a>, <a href="tutorial/Setup/">튜토리얼</a>, 실전 순으로 차례대로 익히시면 됩니다.</li>
-</ul>
-</li>
-<li>LLM, Embeddings 에 대해 생소하다!<ul>
-<li><a href="https://platform.openai.com/docs/introduction">OpenAI cookbook</a> 또는 <a href="https://python.langchain.com/v0.2/docs/introduction/">LangChain 튜토리얼</a> 부터 보고 오시는 것을 추천 드립니다.</li>
-</ul>
-</li>
-</ol>
+<h1 id="setup-quick-start">Setup &amp; Quick Start</h1>
+<p>LangSmith 는 LangChain 에서 제공하는 서비스 이기 때문에 가입하고 API Key를 받아야 합니다.</p>
 <blockquote>
-<p>본 컨텐츠들은 제가 직접 작성하였으며, GPT 와 같은 LLM 의 도움을 받지 않았습니다. 제가 공부하려고 작성한 것이라서요.</p>
+<p>LangChain의 클라우드로 데이터를 보내지 않고 직접 호스팅해서 사용하는 것 또한 가능합니다. (<a href="../../FAQ/">FAQ #1</a>)</p>
 </blockquote>
+<h2 id="api-key">API key 발급</h2>
+<p>아래와 같이 <a href="https://smith.langchain.com/">LangSmith 웹사이트</a> 에 접속하면 대시보드가 보입니다.</p>
+<p><a class="glightbox" href="../../rsc/langsmith_dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/langsmith_dashboard.png" /></a></p>
+<p>설정에 진입 하면 API 키를 발급받을 수 있습니다.</p>
+<p><a class="glightbox" href="../../rsc/langsmith_api_key.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/langsmith_api_key.png" /></a></p>
+<p>이 API 키를 코드에서 사용하면 됩니다.</p>
+<p>첫 사용을 위한 준비는 벌써 끝 입니다.
+무료 사용을 충분히 지원하기 때문에 (매월 5000거의 추적) 테스트 단계로는 무리가 없습니다.</p>
+<h2 id="_1">설치</h2>
+<p>이제 LLM 어플리케이션 쪽에서 LangSmith 로 데이터를 날려주어야 하는데, LLM 어플리케이션 코드는 Python 이라고 가정을 하고 설명하겠습니다.
+꼭 Python을 사용해야하는 것은 아니지만, 이 분야에서 가장 대중적인 Python을 기준으로 작성하겠습니다. Typescript 도 지원하고, REST API 를 사용해서 언어 불문하고 사용이 가능합니다. (참조 - <a href="../../FAQ/">FAQ #2</a> )</p>
+<p>pip 를 이용해서 필요 패키지를 설정해 줍니다.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>langsmith
+</span></code></pre></div>
+<h2 id="quick-start">Quick Start</h2>
+<p>환경 변수를 설정해 줍니다. 앞서 발급받은 api key 를 설정해주면 됩니다.
+테스트를 위해 GPT 를 사용해 볼 예정이라 OPENAI 에서도 api key를 발급받아서 입력하겠습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_TRACING_V2&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;true&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_API_KEY&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+</span></code></pre></div>
+<p>이제 Tracing (추적) 을 해보겠습니다.
+여기서는 <code>wrap_openai</code> 함수와  <code>@traceable</code> 데코레이터 두 가지를 사용했습니다.
+Openai 로의 요청과, traceable 를 달고 있는 함수가 모두 LangSmith 로 로깅되어 추적이 가능해집니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">openai</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">langsmith.wrappers</span> <span class="kn">import</span> <span class="n">wrap_openai</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">langsmith</span> <span class="kn">import</span> <span class="n">traceable</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Auto-trace LLM calls in-context</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">client</span> <span class="o">=</span> <span class="n">wrap_openai</span><span class="p">(</span><span class="n">openai</span><span class="o">.</span><span class="n">Client</span><span class="p">())</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nd">@traceable</span> <span class="c1"># Auto-trace this function</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">def</span> <span class="nf">pipeline</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user_input</span><span class="p">}],</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">pipeline</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># Out: Hello there! How can I assist you today?</span>
+</span></code></pre></div>
+<p>실제 추적된 결과를 한번 보겠습니다.</p>
+<p><a href="https://smith.langchain.com/">LangSmith 웹사이트</a> 에 접속하여 Project 페이지를 보면 "default" 라는 이름이 프로젝트로 추적 결과가 생겼습니다. 위에서 프로젝트 명을 명시하지 않았기 때문입니다.</p>
+<p><a class="glightbox" href="../../rsc/trace_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/trace_1.png" /></a></p>
+<p>default 프로젝트를 클릭하면, run 된 결과들을 볼 수 있습니다.
+@traceable 로 노테이션한 함수 pipeline 도 보이고, 그 안에 openai 로 요청된 gpt 의 결과도 보입니다.
+비용, 소요 시간, 실제 요청된 시간, 모두 다 추적이 완성되었습니다.</p>
+<p><a class="glightbox" href="../../rsc/trace_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/trace_2.png" /></a></p>
 
 
 
@@ -776,15 +846,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../tbd/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tbd">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Tbd
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="intros/LangSmith/" class="md-footer__link md-footer__link--next" aria-label="Next: LangSmith는 무엇인가요?">
+          <a href="../Tracing_1/" class="md-footer__link md-footer__link--next" aria-label="Next: Tracing 기초">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                LangSmith는 무엇인가요?
+                Tracing 기초
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -818,10 +904,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
