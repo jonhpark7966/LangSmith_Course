@@ -1,3 +1,67 @@
 site_name: LangSmith Course
 theme:
-  name: dracula
+  name: material
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'deep purple'
+      accent: 'deep purple'
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: 'deep purple'
+      accent: 'deep purple'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+
+  font:
+    text: 'Noto Sans KR'  # Change to your preferred Korean font
+    code: 'Fira Code'
+
+  features:
+    - navigation.expand 
+    - navigation.path
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - index.md
+  - Concept:
+    - 'intros/LangSmith.md'
+    - 'intros/LLMOps.md'
+    - 'tbd.md'
+  - Tutorial:
+    - 'tutorial/Setup.md'
+    - 'tutorial/Tracing_1.md'
+    - 'tutorial/Tracing_2.md'
+    - 'tutorial/Datasets.md'
+    - 'tutorial/Evaluation.md'
+  - Practice:
+    - 'tbd.md'
+  - FAQ.md
+  - tags.md
+
+plugins:
+  - glightbox
+  - search
+  - tags:
+     tags_file: tags.md

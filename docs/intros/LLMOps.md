@@ -1,4 +1,7 @@
 
+
+
+
 앞서 LangSmith 에 대해서 대략적으로 소개를 했습니다.
 
 LangSmith 라는 플랫폼은 결국 LLM 기반 어플리케이션의 개발/운영 과정에 도움을 주는 도구인데요, 한마디로 분류하자면 LLMOps 라고 볼 수 있겠습니다. 이제는 LMMOps 라고 불러야 할 수도 있겠군요. 
@@ -9,28 +12,27 @@ LLMOps 라는 용어와 개념에 대해 명확히 정의하기가 어렵기 때
 
 # DevOps, MLOps, LLMOps
 
-LLMOps 는 DevOps 로 부터 파생되어 나온 개념이라고 볼 수 있습니다.
+LLMOps 는 DevOps 로 부터 파생되어 나온 개념이라고 볼 수 있습니다.  
 DevOps 부터 설명하도록 하겠습니다.
 
 ## DevOps
 
-2007년정도 도입된 개념으로 NASA 의 절차와 아이디어를 모방하여 배포의 안정성을 높이려는 시도가 시초라고 합니다.
-핵심 목표는 개발, 테스트, 배포의 단계를 효율화 하는 것입니다. 개발팀, QA팀, 운영팀 (+ documentation팀) 모두가 걸쳐있는 단계라서 협업이 중요하죠.
-DevOps 도입 이전에는 개발 -> 테스트 -> 배포 -> 운영 과정이 너무 느리고 문제가 발생할 여지도 많고, 다양한 팀들 간의 소통에도 문제가 자주 발생 했었습니다.
-![[Pasted image 20240713002748.png]]
+2007년정도 도입된 개념으로 NASA 의 절차와 아이디어를 모방하여 배포의 안정성을 높이려는 시도가 시초라고 합니다.  
+핵심 목표는 개발, 테스트, 배포의 단계를 효율화 하는 것입니다. 개발팀, QA팀, 운영팀 (+ documentation팀) 모두가 걸쳐있는 단계라서 협업이 중요하죠.  
+DevOps 도입 이전에는 개발 -> 테스트 -> 배포 -> 운영 과정이 너무 느리고 문제가 발생할 여지도 많고, 다양한 팀들 간의 소통에도 문제가 자주 발생 했었습니다.  
+![](../rsc/devops.png)
 
-DevOps 는 여러 형태가 있지만, 현 시점 기준으로 많은 조직의 변화를 지켜본 결과 아래와 같은 모습이 되었습니다.
+DevOps 는 여러 형태가 있지만, 현 시점 기준으로 많은 조직의 변화를 지켜본 결과 아래와 같은 모습이 되었습니다.  
 - QA 팀은 해고되고, 개발팀과 운영팀이 하나의 팀으로 통합이 되어 빠른 배포를 달성함.
 - 개발 브랜치의 커밋들이 메인 브랜치로 머지되면, CI/CD 시스템이 빌드, 테스트 후 자동으로 배포함.
 
-요즘에는 Github 이나 Gitlab 에서도 CI/CD 를 잘 지원하죠. 조직 단위가 아닌 개인 단위로도 효율적인 방법론입니다. 최근에는 회의적인 시각들도 많이 있기는 합니다만, 채용 포지션에 DevOps 포지션이 있다는 것 만으로도 얼마나 대중적인 방법론인지 체감할 수 있습니다.
+요즘에는 Github 이나 Gitlab 에서도 CI/CD 를 잘 지원하죠. 조직 단위가 아닌 개인 단위로도 효율적인 방법론입니다. 최근에는 회의적인 시각들도 많이 있기는 합니다만, 채용 포지션에 DevOps 포지션이 있다는 것 만으로도 얼마나 대중적인 방법론인지 체감할 수 있습니다.  
 
-DevOps 에 관심이 있으시다면 아래 두 가지 글을 읽어보시길 추천드립니다.
-DevOps 에 대한 아마존의 정의와 최근의 회의적인 시각에 대한 포스트 입니다.
+DevOps 에 관심이 있으시다면 아래 두 가지 글을 읽어보시길 추천드립니다.  
+DevOps 에 대한 아마존의 정의와 최근의 회의적인 시각에 대한 포스트 입니다.  
 
-[1] https://matduggan.com/a-eulogy-for-devops/
-[2] https://aws.amazon.com/ko/devops/what-is-devops/
-
+1. [DevOps에 대한 회의론](https://matduggan.com/a-eulogy-for-devops/)  
+2. [AWS의 DevOps 정의](https://aws.amazon.com/ko/devops/what-is-devops/_)
 
 
 ## MLOps
@@ -47,9 +49,9 @@ DevOps 와의 구체적인 차이점을 꼽으라면,
 DevOps에서의 코드가 MLOps 에서의 데이터&모델 이라고 보면 되겠습니다.
 아래 그림은 RedHat OpenShift 에서 바라보는 MLOps 의 개요입니다.
 
-![[Pasted image 20240713122120.png]]
+![](../rsc/mlops.png)
 
-[3] https://www.redhat.com/rhdc/managed-files/cl-mlops-architecture-openshift-infographic-f31021-202202-en_1.pdf
+3. [Redhat의 MLOps 정의](https://www.redhat.com/rhdc/managed-files/cl-mlops-architecture-openshift-infographic-f31021-202202-en_1.pdf)
 
 ## LLMOps
 
