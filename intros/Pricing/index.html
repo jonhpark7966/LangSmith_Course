@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../LLMOps/">
+      
+      
+        <link rel="next" href="../../tbd/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Tracing 컨셉 가이드 - LangSmith Course</title>
+        <title>가격 정책 - LangSmith Course</title>
       
     
     
@@ -77,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tracing" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tracing 컨셉 가이드
+              가격 정책
             
           </span>
         </div>
@@ -249,8 +253,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -260,13 +266,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -280,7 +284,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Concept
@@ -354,10 +358,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Pricing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    가격 정책
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -366,6 +390,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#langchain-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      LangChain Cloud
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Hosting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -690,36 +752,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
+  <a href="#langchain-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      Run
+      LangChain Cloud
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trace" class="md-nav__link">
+  <a href="#self-hosting" class="md-nav__link">
     <span class="md-ellipsis">
-      Trace
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feedback
+      Self Hosting
     </span>
   </a>
   
@@ -740,42 +784,15 @@
                   
 
 
-<h1 id="tracing">Tracing 컨셉 가이드</h1>
-<p>LangSmith 에서 고안한 Tracing 컨셉 가이드 입니다.<br />
-LangSmith는 Project &gt;&gt; Trace &gt;&gt; Run  단위로 데이터를 관리합니다.</p>
-<p><a class="glightbox" href="../../rsc/tracing_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/tracing_tree.png" /></a></p>
-<h2 id="run">Run</h2>
-<ul>
-<li>하나의 In, 하나의 Out 입니다.</li>
-</ul>
-<h2 id="trace">Trace</h2>
-<ul>
-<li>사용자 입장에서의 하나의 In, 하나의 Out 입니다.</li>
-<li>예를 들어 RAG 라고 가정하면, Retrieve 가 하나의 Run, Generation이 하나의 Run 이라 합쳐서 하나의 Trace 입니다.</li>
-</ul>
-<p>아래 보는 것과 같이 일반적인 LLM 어플리케이션은 여러개의 Run이 모여 하나의 Trace 가 되겠죠.</p>
-<p><a class="glightbox" href="../../rsc/trace_run.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/trace_run.png" /></a></p>
-<h2 id="project">Project</h2>
-<ul>
-<li>여러 개의 Trace 들 모음으로 운영자가 관리하는 단위입니다.</li>
-<li>추적 기능을 활성화 할때, Project를 지정할 수 있습니다.</li>
-</ul>
-<h2 id="feedback">Feedback</h2>
-<p>각각의 Run 에 피드백을 수집할 수 있습니다.
-- 사용자가 피드백을 같이 날려줄 수가 있습니다.
-- LangSmith 에서 운영자가 직접 달아 줄 수 있습니다.
-- Evaluation 과정을 자동화해서 프로그램이 달아 줄 수 있습니다.</p>
-<p>아래의 경우는 사용자가 피드백을 챗봇 어플리케이션에서 마킹 해준 경우 입니다. API 를 통해 수집 되었습니다.</p>
-<p><a class="glightbox" href="../../rsc/feedback.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/feedback.png" /></a></p>
-<h1 id="tag-metadata">Tag &amp; Metadata</h1>
-<p>이 외에도 태그랑 메타데이터를 추가로 달아줄 수 있습니다. 추가 정보를 달아 주는 개념이로 일반적인 데이터 관리에서의 태그랑 메타데이터와 개념이 같습니다. 역시 직접 LangSmith에서 달아줄 수도 있고, LLM 어플리케이션에서 같이 달아 줄 수도 있습니다.</p>
+<h1 id="_1">가격 정책</h1>
+<p>제일 중요한 것 먼저 요약하겠습니다.</p>
 <blockquote>
-<p>LangSmith 클라우드 서비스는 400일간 데이터를 보관해 줍니다. 그 이후에는 날라간다고 하네요.</p>
+<p>LangSmith (랭스미스) 는 무료로 사용가능합니다.</p>
 </blockquote>
-<h2 id="_1">참조</h2>
-<ul>
-<li><a href="https://docs.smith.langchain.com/concepts/tracing">LangSmith 공식 문서</a></li>
-</ul>
+<p>사용량이 많아지면, 비용을 내야 하는데, 개발단계에서 사용하기에는 충분합니다.<br />
+혹시 너무 사용량이 너무 많아질 것이 고민이라면, self hosting 해서 무료로 사용할 수 있습니다.  </p>
+<h2 id="langchain-cloud">LangChain Cloud</h2>
+<h2 id="self-hosting">Self Hosting</h2>
 
 
 
@@ -800,6 +817,44 @@ LangSmith는 Project &gt;&gt; Trace &gt;&gt; Run  단위로 데이터를 관리�
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../LLMOps/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LLMOps">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                LLMOps
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../tbd/" class="md-footer__link md-footer__link--next" aria-label="Next: Tbd">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Tbd
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
