@@ -53,11 +53,11 @@ experiment_results = evaluate(
 
 Exact Match 테스트한 결과를 LangSmith에서 확인하면, 다음과 같습니다.  
 Experiment 가 생겼고 그 결과가 표시됩니다. 
-![](rsc/evaluation_1.png)
+![](../rsc/evaluation_1.png)
 
 결과를 클릭하여 더 자세히 보겠습니다.  
 
-![](rsc/evaluation_2.png)
+![](../rsc/evaluation_2.png)
 
 각 데이터셋 example에 대해 LLM 어플리케이션의 output, 평가 결과까지 잘 매겨져 나왔습니다.
 위에서 수행한 evaluation 도 Run 이고 Trace 이기 때문에 프로젝트에 추적 결과가 생성됩니다.  

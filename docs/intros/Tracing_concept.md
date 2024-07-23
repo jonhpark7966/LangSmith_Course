@@ -5,7 +5,7 @@
 LangSmith 에서 고안한 Tracing 컨셉 가이드 입니다.  
 LangSmith는 Project >> Trace >> Run  단위로 데이터를 관리합니다.
 
-![](rsc/tracing_tree.png)
+![](../rsc/tracing_tree.png)
 
 ## Run
 - 하나의 In, 하나의 Out 입니다.
@@ -17,7 +17,7 @@ LangSmith는 Project >> Trace >> Run  단위로 데이터를 관리합니다.
 
 아래 보는 것과 같이 일반적인 LLM 어플리케이션은 여러개의 Run이 모여 하나의 Trace 가 되겠죠.
 
-![](rsc/trace_run.png)
+![](../rsc/trace_run.png)
 
 ## Project
 
@@ -34,7 +34,7 @@ LangSmith는 Project >> Trace >> Run  단위로 데이터를 관리합니다.
 
 아래의 경우는 사용자가 피드백을 챗봇 어플리케이션에서 마킹 해준 경우 입니다. API 를 통해 수집 되었습니다.
 
-![](rsc/feedback.png)
+![](../rsc/feedback.png)
 
 
 # Tag & Metadata
