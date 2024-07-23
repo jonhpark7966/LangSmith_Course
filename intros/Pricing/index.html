@@ -407,9 +407,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#langchain-cloud" class="md-nav__link">
+  <a href="#langsmith-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      LangChain Cloud
+      LangSmith Cloud
     </span>
   </a>
   
@@ -752,9 +752,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#langchain-cloud" class="md-nav__link">
+  <a href="#langsmith-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      LangChain Cloud
+      LangSmith Cloud
     </span>
   </a>
   
@@ -791,8 +791,22 @@
 </blockquote>
 <p>사용량이 많아지면, 비용을 내야 하는데, 개발단계에서 사용하기에는 충분합니다.<br />
 혹시 너무 사용량이 너무 많아질 것이 고민이라면, self hosting 해서 무료로 사용할 수 있습니다.  </p>
-<h2 id="langchain-cloud">LangChain Cloud</h2>
+<h2 id="langsmith-cloud">LangSmith Cloud</h2>
+<p>기본적으로 LangSmith 는 클라우드 서비스 입니다. 그냥 공홈에서 가입하고 바로 사용하시면 됩니다.<br />
+이 때 무료사용량이 꽤 됩니다.<br />
+24년 7월 기준, 매월 5000 tracing 까지 무료 입니다.<br />
+개발 단계에서는 매월 5000 개 이상의 trace 를 만든다면, 무료사용이 중요한 분은 아니시겠죠.  </p>
+<p>요금은 크게 아래와 같은 항목에 부과가 됩니다.
+  - Trace 가 쌓이는 만큼 비용이 발생합니다.
+      - Trace 는 14일 보관, 400일 보관 크게 두 가지에 따라 가격이 달라집니다.
+  - 하나의 프로젝트를 몇 개의 계정이 같이 작업하느냐에 따라 비용이 발생합니다.</p>
+<p>스타트업 할인도 있는데 저는 대충 반값정도로 할인 해줬고, 이는 아마 회사마다 시점마다 많이 다를 것 같네요. <br />
+시점마다 달라질 테니 꼭 <a href="https://docs.smith.langchain.com/pricing">공식 가격 안내 페이지</a> 를 참조하세요.  </p>
 <h2 id="self-hosting">Self Hosting</h2>
+<p>LangSmith 플랫폼은 오픈소스는 아니지만, 직접 호스팅은 지원합니다.<br />
+안내를 보니 쿠버네티스랑 도커로 설치하는 안내가 있네요.<br />
+이걸 생각하시는 분들은 이미 고수이실테니 자세히 설명은 생략하고요, 링크만 달아둡니다.<br />
+참조 - <a href="https://docs.smith.langchain.com/self_hosting/architectural_overview">안내 페이지</a></p>
 
 
 
