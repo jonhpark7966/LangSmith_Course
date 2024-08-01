@@ -340,11 +340,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intors/Evaluation_with_dataset.md" class="md-nav__link">
+      <a href="../../intros/Evaluation_with_dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Datasets &amp; Evaluation 컨셉 가이드
   </span>
   
 
@@ -591,19 +591,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step" class="md-nav__link">
+  <a href="#custom-evaluator" class="md-nav__link">
     <span class="md-ellipsis">
-      Step-by-Step 가이드
+      Custom Evaluator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-Step 가이드">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      LangChain 내장 평가 함수
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LangChain 내장 평가 함수">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#qa-correctness" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1.
+      Q&amp;A Correctness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      기타 평가 기준
     </span>
   </a>
   
@@ -615,9 +633,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-evaluator" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Evaluator
+      평가 결과 및 채점 과정 열람
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 결과 통계 열람
     </span>
   </a>
   
@@ -785,19 +812,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-by-step" class="md-nav__link">
+  <a href="#custom-evaluator" class="md-nav__link">
     <span class="md-ellipsis">
-      Step-by-Step 가이드
+      Custom Evaluator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-Step 가이드">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      LangChain 내장 평가 함수
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LangChain 내장 평가 함수">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#qa-correctness" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1.
+      Q&amp;A Correctness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      기타 평가 기준
     </span>
   </a>
   
@@ -809,9 +854,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-evaluator" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Evaluator
+      평가 결과 및 채점 과정 열람
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 결과 통계 열람
     </span>
   </a>
   
@@ -834,7 +888,8 @@
 
 <h1 id="evaluation">Evaluation (평가)</h1>
 <p>데이터를 준비했으니 Evaluation 도 해보겠습니다.
-먼저 가장 간단한 예시 부터 시작합니다.</p>
+먼저 가장 간단한 예시 부터 시작합니다.
+필자 의견으로는 가장 유용한 기능이니 "Evaluation" 문서는 한 번 쭉 보시는 것을 추천드립니다.  </p>
 <h2 id="quick-start">Quick Start</h2>
 <p>아래 코드를 수행하면, 데이터셋을 만들고, example을 추가하고, 평가합니다.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">langsmith</span> <span class="kn">import</span> <span class="n">Client</span>
@@ -888,12 +943,82 @@ Experiment 가 생겼고 그 결과가 표시됩니다.
 <p>![[evaluator_3.png]]</p>
 <p>evaluators 라는 이름의 프로젝트로 trace 를 추적할 수 있습니다.<br />
 예상과 다르게 평가 결과가 안 좋았다면, 그 이유를 찾는 디버깅이 가능하겠네요.  </p>
-<h2 id="step-by-step">Step-by-Step 가이드</h2>
-<h3 id="step-1">Step 1.</h3>
 <h2 id="custom-evaluator">Custom Evaluator</h2>
 <p>위 간단한 예시에서는 exact_match, 정확하게 일치하는 지를 기준으로 평가했습니다. 문제집의 정답 채점하는 것 처럼요.<br />
 LLM 어플리케이션의 가장 어려운 점은 평가가 정성적인 경우가 많다는 점 입니다.<br />
-그래서, Evaluation을 제 맘대로 만들 수 있어야 합니다. </p>
+그래서, Evaluation을 제 맘대로 만들 수 있어야 합니다.  </p>
+<p>위 exact_math 함수 처럼 맘대로 만들면 됩니다.
+지켜야 할일은 in/out 형식만 잘 맞춰주면 되겠죠.
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">langsmith.schemas</span> <span class="kn">import</span> <span class="n">Example</span><span class="p">,</span> <span class="n">Run</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">exact_match</span><span class="p">(</span><span class="n">root_run</span><span class="p">:</span> <span class="n">Run</span><span class="p">,</span> <span class="n">example</span><span class="p">:</span> <span class="n">Example</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">score</span> <span class="o">=</span> <span class="n">root_run</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">example</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">score</span><span class="p">),</span> <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;correct_label&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+input 은 Run, Example 입니다.
+Run 은 Trace 에 추적되는 하나의 단위이고, Example 은 테스트할 데이터 이죠.  </p>
+<p>output 은 dict 타입입니다. 여기에는 현재 score, key 가 달려 있는데, 평가 결과가 곧 피드백이기 떄문에 피드백의 형식을 지켜줘야합니다.<br />
+자세한 내용은 <a href="https://docs.smith.langchain.com/reference/data_formats/feedback_data_format">피드백 데이터 포맷</a> 문서를 참고하세요.  </p>
+<h2 id="langchain">LangChain 내장 평가 함수</h2>
+<p>Custom Evaluator 로 평가 로직을 마음대로 만들 수 있는 것 좋습니다. </p>
+<blockquote>
+<p>그런데... 언제 다 만들죠. 어떻게 평가해야하는게 좋을까요??  </p>
+</blockquote>
+<p>그래서 많이 쓰일 법한 평가 함수들은 이미 다 만들어져 있습니다.<br />
+무엇보다도 <a href="../../intros/Evaluation_with_dataset/###LLM-as-judge">LLM as judge</a>, LLM 에게 채점을 시키는 방법이 구현이 되어있습니다.<br />
+한번 보겠습니다. </p>
+<h3 id="qa-correctness">Q&amp;A Correctness</h3>
+<p>질문과 답 데이터 세트를 준비했다면, 내가 만든 LLM 어플리케이션 한테 시험을 보게 시키고 맞았는지 틀렸는지 확인해볼 수 있습니다.<br />
+방금 위에서 본 <code>exact_math</code> 함수로 검사하면 되는게 아니냐고 생각하실 수 있는데요,<br />
+<strong>아닙니다.</strong>   </p>
+<p>정답이 애매한 경우에 대해 채점을 더 잘 하고 싶은 경우를 생각해 보겠습니다.  </p>
+<blockquote>
+<p>Q: 장비의 무기는 무엇입니까?<br />
+A:  장팔사모</p>
+</blockquote>
+<p>간단한 질답 세트입니다.  이 질문을 GPT에게 해봤더니, 이렇게 답했습니다. </p>
+<blockquote>
+<p>창 </p>
+</blockquote>
+<p>이건 정답인가요?  장팔사모는 창이 맞긴 한데요. 채점 기준에 따라서 정답일 수도 아닐 수도 있겠죠.<br />
+답변이 단답형이 경우에도 이런데 서술형이 되면 채점이 더욱 애매해집니다. 이런 경우를 해결하기 위한 langchain의 제시 방법을 살펴보겠습니다.  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">langsmith</span> <span class="kn">import</span> <span class="n">Client</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">langsmith.evaluation</span> <span class="kn">import</span> <span class="n">LangChainStringEvaluator</span><span class="p">,</span> <span class="n">evaluate</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">qa_evaluator</span> <span class="o">=</span> <span class="n">LangChainStringEvaluator</span><span class="p">(</span><span class="s2">&quot;qa&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">context_qa_evaluator</span> <span class="o">=</span> <span class="n">LangChainStringEvaluator</span><span class="p">(</span><span class="s2">&quot;context_qa&quot;</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">cot_qa_evaluator</span> <span class="o">=</span> <span class="n">LangChainStringEvaluator</span><span class="p">(</span><span class="s2">&quot;cot_qa&quot;</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">evaluate</span><span class="p">(</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="o">...</span> <span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">data</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">evaluators</span><span class="o">=</span><span class="p">[</span><span class="n">qa_evaluator</span><span class="p">,</span> <span class="n">context_qa_evaluator</span><span class="p">,</span> <span class="n">cot_qa_evaluator</span><span class="p">],</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>LangChainStringEvaluator 에는 여러가지 correctness 체크를 방법을 제시합니다.<br />
+위 코드에서는 "qa", "context_qa", "cot_qa" 를 사용했습니다.  </p>
+<h3 id="_1">기타 평가 기준</h3>
+<p>Q&amp;A Correctness 를 평가하는 로직을 사용했습니다. 이 외에도 다양한 평가 기준들이 있습니다. 답변이 얼마나 도움이 되는지, 말투가 공격적이지는 않는지, 여성혐오 표현이 있지는 않은지, 기타 내장 평가 기능들은 <a href="https://docs.smith.langchain.com/reference/sdk_reference/langchain_evaluators">SDK 문서</a> 를 참조하세요.<br />
+LangSmith의 Evaluation 기능 설명을 위해 자세한 내용은 생략합니다.  </p>
+<h2 id="_2">평가 결과 및 채점 과정 열람</h2>
+<p>위에서 제가 지정한  Q&amp;A 관련 채점 결과들이 피드백으로 붙어있습니다.  </p>
+<p>![[../rsc/lc_eval.png]]</p>
+<p>correct_label 은 위에서 만든 exact_match 랑 같은 검사 로직 입니다. 당연히 틀렸죠. "장팔사모" 와 "창" 은 텍스트가 다르니까요. 제일 엄격한 검사죠.  </p>
+<p><code>correctness</code>, <code>context correctness</code> 는 <code>INCORRECT</code> 라고 대답한 반면, <code>cot context correctness</code> 는 <code>CORRECT</code> 라고 대답했습니다.</p>
+<p>![[../rsc/eval_trace.png]]</p>
+<p>각 채점 항목을 클릭하면 어떻게 이런 채점이 되었는지 추적할 수 있습니다.<br />
+혼자 다른 정답이라고 채점한 <code>cot context correctness</code> 의 채점 과정을 한번 보겠습니다.  </p>
+<p>![[../rsc/eval_cot.png]]</p>
+<p>채점 과정도 하나의 Trace 이기 떄문에 추적결과를 볼 수 있습니다. gpt-4 를 사용했고, 0.01 달러 정도 비용이 들었군요. 프롬프팅이 미리 다 되어있는데, 이름 처럼 cot, Chain of Thought 과정이 구현이 되어있습니다.<br />
+gpt-4 가 왜 정답이라고 처리 했는 지 output을 보면, 장비가 원래 창을 쓴다는 사실을 학습을 통해 알고 있었기 때문에 정답이라고 처리 했다는군요.  </p>
+<p>다른 항목들은 이 문서에서는 너무 길이지니 생략하겠습니다. LangChain이 미리 만들어둔 채점 프롬프팅을 바로 사용할 수 있다는 것이 참 편리하고 좋습니다.  </p>
+<h2 id="_3">평가 결과 통계 열람</h2>
+<p>이 과정을 모든 데이터 셋에 대해서 다 수행하고 결과를 내주기 때문에, Q&amp;A 데이터 셋이 많다면, 질답 퀄리티가 살짝 부족해도 양으로 해결할 수 있습니다. </p>
+<p>![[../rsc/eval_various.png]]</p>
+<p>여러 질답 데이터셋에 대한 한번의 평가 입니다. 각 질답에 대해 다양한 채점기준의 채점 결과가 모두 달려 기록된 것을 볼 수 있습니다.  </p>
+<p>![[../rsc/eval_experiments.png]]</p>
+<p>LLM 어플리케이션을 바꿔가면서 evaluation 을 여러번 수행하면, 평가 점수를 이렇게 비교해볼 수 있습니다. LLM 어플리케이션의 발전 과정을 정량화해서 볼 수 있습니다.  </p>
 
 
 
