@@ -48,7 +48,7 @@ nav:
   - Concept:
     - 'intros/LangSmith.md'
     - 'intros/LLMOps.md'
-    - 'intors/Evaluation_with_dataset.md'
+    - 'intros/Evaluation_with_dataset.md'
     - 'intros/Pricing.md'
     - 'tbd.md'
   - Tutorial:
