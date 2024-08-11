@@ -104,7 +104,7 @@ Summarization 을 예시로 생각해보면, 어떤 것이 잘 된 요약인지 
 
 ## Evaluation 적용하기
 
-![[../rsc/apply_eval.png]]
+![](../rsc/apply_eval.png)
 
 앞서 설명한 Evaluation 방법들을 실제로 적용을 해보겠습니다.
 

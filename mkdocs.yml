@@ -50,7 +50,6 @@ nav:
     - 'intros/LLMOps.md'
     - 'intros/Evaluation_with_dataset.md'
     - 'intros/Pricing.md'
-    - 'tbd.md'
   - Tutorial:
     - 'tutorial/Setup.md'
     - 'tutorial/Tracing_1.md'

@@ -63,7 +63,7 @@ Experiment 가 생겼고 그 결과가 표시됩니다.
 각 데이터셋 example에 대해 LLM 어플리케이션의 output, 평가 결과까지 잘 매겨져 나왔습니다.
 위에서 수행한 evaluation 도 Run 이고 Trace 이기 때문에 프로젝트에 추적 결과가 생성됩니다.  
 
-![[evaluator_3.png]]
+![](evaluator_3.png)
 
 evaluators 라는 이름의 프로젝트로 trace 를 추적할 수 있습니다.  
 예상과 다르게 평가 결과가 안 좋았다면, 그 이유를 찾는 디버깅이 가능하겠네요.  
@@ -148,19 +148,19 @@ LangSmith의 Evaluation 기능 설명을 위해 자세한 내용은 생략합니
 
 위에서 제가 지정한  Q&A 관련 채점 결과들이 피드백으로 붙어있습니다.  
 
-![[../rsc/lc_eval.png]]
+![](../rsc/lc_eval.png)
 
 correct_label 은 위에서 만든 exact_match 랑 같은 검사 로직 입니다. 당연히 틀렸죠. "장팔사모" 와 "창" 은 텍스트가 다르니까요. 제일 엄격한 검사죠.  
 
 `correctness`, `context correctness` 는 `INCORRECT` 라고 대답한 반면, `cot context correctness` 는 `CORRECT` 라고 대답했습니다.
 
 
-![[../rsc/eval_trace.png]]
+![](../rsc/eval_trace.png)
 
 각 채점 항목을 클릭하면 어떻게 이런 채점이 되었는지 추적할 수 있습니다.  
 혼자 다른 정답이라고 채점한 `cot context correctness` 의 채점 과정을 한번 보겠습니다.  
 
-![[../rsc/eval_cot.png]]
+![](../rsc/eval_cot.png)
 
 채점 과정도 하나의 Trace 이기 떄문에 추적결과를 볼 수 있습니다. gpt-4 를 사용했고, 0.01 달러 정도 비용이 들었군요. 프롬프팅이 미리 다 되어있는데, 이름 처럼 cot, Chain of Thought 과정이 구현이 되어있습니다.  
 gpt-4 가 왜 정답이라고 처리 했는 지 output을 보면, 장비가 원래 창을 쓴다는 사실을 학습을 통해 알고 있었기 때문에 정답이라고 처리 했다는군요.  
@@ -171,11 +171,11 @@ gpt-4 가 왜 정답이라고 처리 했는 지 output을 보면, 장비가 원�
 
 이 과정을 모든 데이터 셋에 대해서 다 수행하고 결과를 내주기 때문에, Q&A 데이터 셋이 많다면, 질답 퀄리티가 살짝 부족해도 양으로 해결할 수 있습니다. 
 
-![[../rsc/eval_various.png]]
+![](../rsc/eval_various.png)
 
 여러 질답 데이터셋에 대한 한번의 평가 입니다. 각 질답에 대해 다양한 채점기준의 채점 결과가 모두 달려 기록된 것을 볼 수 있습니다.  
 
-![[../rsc/eval_experiments.png]]
+![](../rsc/eval_experiments.png)
 
 LLM 어플리케이션을 바꿔가면서 evaluation 을 여러번 수행하면, 평가 점수를 이렇게 비교해볼 수 있습니다. LLM 어플리케이션의 발전 과정을 정량화해서 볼 수 있습니다.  
 
