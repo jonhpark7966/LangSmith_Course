@@ -375,27 +375,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tbd/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tbd
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -940,7 +919,7 @@ Experiment 가 생겼고 그 결과가 표시됩니다.
 <p><a class="glightbox" href="../../rsc/evaluation_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/evaluation_2.png" /></a></p>
 <p>각 데이터셋 example에 대해 LLM 어플리케이션의 output, 평가 결과까지 잘 매겨져 나왔습니다.
 위에서 수행한 evaluation 도 Run 이고 Trace 이기 때문에 프로젝트에 추적 결과가 생성됩니다.  </p>
-<p>![[evaluator_3.png]]</p>
+<p><a class="glightbox" href="evaluator_3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="evaluator_3.png" /></a></p>
 <p>evaluators 라는 이름의 프로젝트로 trace 를 추적할 수 있습니다.<br />
 예상과 다르게 평가 결과가 안 좋았다면, 그 이유를 찾는 디버깅이 가능하겠네요.  </p>
 <h2 id="custom-evaluator">Custom Evaluator</h2>
@@ -1003,21 +982,21 @@ A:  장팔사모</p>
 LangSmith의 Evaluation 기능 설명을 위해 자세한 내용은 생략합니다.  </p>
 <h2 id="_2">평가 결과 및 채점 과정 열람</h2>
 <p>위에서 제가 지정한  Q&amp;A 관련 채점 결과들이 피드백으로 붙어있습니다.  </p>
-<p>![[../rsc/lc_eval.png]]</p>
+<p><a class="glightbox" href="../../rsc/lc_eval.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/lc_eval.png" /></a></p>
 <p>correct_label 은 위에서 만든 exact_match 랑 같은 검사 로직 입니다. 당연히 틀렸죠. "장팔사모" 와 "창" 은 텍스트가 다르니까요. 제일 엄격한 검사죠.  </p>
 <p><code>correctness</code>, <code>context correctness</code> 는 <code>INCORRECT</code> 라고 대답한 반면, <code>cot context correctness</code> 는 <code>CORRECT</code> 라고 대답했습니다.</p>
-<p>![[../rsc/eval_trace.png]]</p>
+<p><a class="glightbox" href="../../rsc/eval_trace.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/eval_trace.png" /></a></p>
 <p>각 채점 항목을 클릭하면 어떻게 이런 채점이 되었는지 추적할 수 있습니다.<br />
 혼자 다른 정답이라고 채점한 <code>cot context correctness</code> 의 채점 과정을 한번 보겠습니다.  </p>
-<p>![[../rsc/eval_cot.png]]</p>
+<p><a class="glightbox" href="../../rsc/eval_cot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/eval_cot.png" /></a></p>
 <p>채점 과정도 하나의 Trace 이기 떄문에 추적결과를 볼 수 있습니다. gpt-4 를 사용했고, 0.01 달러 정도 비용이 들었군요. 프롬프팅이 미리 다 되어있는데, 이름 처럼 cot, Chain of Thought 과정이 구현이 되어있습니다.<br />
 gpt-4 가 왜 정답이라고 처리 했는 지 output을 보면, 장비가 원래 창을 쓴다는 사실을 학습을 통해 알고 있었기 때문에 정답이라고 처리 했다는군요.  </p>
 <p>다른 항목들은 이 문서에서는 너무 길이지니 생략하겠습니다. LangChain이 미리 만들어둔 채점 프롬프팅을 바로 사용할 수 있다는 것이 참 편리하고 좋습니다.  </p>
 <h2 id="_3">평가 결과 통계 열람</h2>
 <p>이 과정을 모든 데이터 셋에 대해서 다 수행하고 결과를 내주기 때문에, Q&amp;A 데이터 셋이 많다면, 질답 퀄리티가 살짝 부족해도 양으로 해결할 수 있습니다. </p>
-<p>![[../rsc/eval_various.png]]</p>
+<p><a class="glightbox" href="../../rsc/eval_various.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/eval_various.png" /></a></p>
 <p>여러 질답 데이터셋에 대한 한번의 평가 입니다. 각 질답에 대해 다양한 채점기준의 채점 결과가 모두 달려 기록된 것을 볼 수 있습니다.  </p>
-<p>![[../rsc/eval_experiments.png]]</p>
+<p><a class="glightbox" href="../../rsc/eval_experiments.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../rsc/eval_experiments.png" /></a></p>
 <p>LLM 어플리케이션을 바꿔가면서 evaluation 을 여러번 수행하면, 평가 점수를 이렇게 비교해볼 수 있습니다. LLM 어플리케이션의 발전 과정을 정량화해서 볼 수 있습니다.  </p>
 
 
