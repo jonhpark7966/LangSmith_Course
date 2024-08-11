@@ -1147,14 +1147,20 @@ Tracing (추적) 이나, Evaluation (평가) 기능과 연동되어 동작하기
 <p>다음 단계는 휴리스틱한 기법의 적용입니다. 사람이 "이렇게 평가하면 괜찮지 않을까?" 하는 가설을 세우고 직접 함수를 파이썬으로 구현하여 넣어줍니다. 단순한 단답형 QA 평가셋의 경우 정답과 정확히 일치하는지 테스트 하는 함수를 구현할 수도 있고, 정답 키워드가 포함 되는 지 테스트하는 함수를 구현할 수도 있습니다.
 <code>Custom evaluator</code> 를 구현하여 넣어주면 되니 자유도가 높으나, 평가 방법에 대한 신뢰도를 직접 판단해야합니다. 단순한 데이터셋에 대해서만 잘 작동하겠습니다.</p>
 <h3 id="llm-as-judge">LLM-as-judge</h3>
-<p>LLM 을 판사로 사용합니다. 평가자로서 LLM 을 사용하고, 기준도 넣어주고 LLM 이 평가 점수와 이유까지 내줍니다. 전문가보다 더 잘 평가한다면 매우 강력하고, 시간도 단축되고, 비용도 줄고, 좋겠죠. 평가를 잘 하게 만드는 것 또한 하나의 LLM application 이라, 배보다 배꼽이 더 커질 수도 있습니다.<br />
-- reference-free 한 평가
-    - 답변이 공격성이 있는 지, 부정적인지, 간결한지, 등 정답지와 무관한 평가를 진행할 수도 있습니다.
-    - LangSmith 에서는 conciseness, harmfulness, maliciousness 등 여러 기준에 대해 평가하는 LLM judge 를 템플릿 처럼 만들어서 제공합니다. 매우 유용합니다. 원버튼에 다양한 평가를 바로 수행가능하니까요.
-- reference 가 필요한 평가
-    - 데이터셋 example에 적혀있는 결과값과 비교하여 평가를 내릴 수도 있습니다. 
-    - LangSmith 에서는 QA correctness, Context QA, Chain of Thought QA 와 같이 얼마나 대답이 정확한지 reference 와 비교하여 결과를 내리주기도 합니다.
-    - LLM application 에 따라 평가 로직 개발이 어려울 수도 있습니다.</p>
+<p>LLM 을 판사로 사용합니다. 평가자로서 LLM 을 사용하고, 기준도 넣어주고 LLM 이 평가 점수와 이유까지 내줍니다. 전문가보다 더 잘 평가한다면 매우 강력하고, 시간도 단축되고, 비용도 줄고, 좋겠죠. 평가를 잘 하게 만드는 것 또한 하나의 LLM application 이라, 배보다 배꼽이 더 커질 수도 있습니다.  </p>
+<ul>
+<li>reference-free 한 평가<ul>
+<li>답변이 공격성이 있는 지, 부정적인지, 간결한지, 등 정답지와 무관한 평가를 진행할 수도 있습니다.</li>
+<li>LangSmith 에서는 conciseness, harmfulness, maliciousness 등 여러 기준에 대해 평가하는 LLM judge 를 템플릿 처럼 만들어서 제공합니다. 매우 유용합니다. 원버튼에 다양한 평가를 바로 수행가능하니까요.</li>
+</ul>
+</li>
+<li>reference 가 필요한 평가<ul>
+<li>데이터셋 example에 적혀있는 결과값과 비교하여 평가를 내릴 수도 있습니다. </li>
+<li>LangSmith 에서는 QA correctness, Context QA, Chain of Thought QA 와 같이 얼마나 대답이 정확한지 reference 와 비교하여 결과를 내리주기도 합니다.</li>
+<li>LLM application 에 따라 평가 로직 개발이 어려울 수도 있습니다.</li>
+</ul>
+</li>
+</ul>
 <h3 id="pairwise">Pairwise</h3>
 <p>비교 검사입니다. LLM-as-judge 가 판단을 잘 못 할 때 유용합니다.<br />
 Summarization 을 예시로 생각해보면, 어떤 것이 잘 된 요약인지 판단하기가 어렵습니다.<br />
