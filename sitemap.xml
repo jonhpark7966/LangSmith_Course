@@ -2,72 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/FAQ/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tbd/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/intros/Evaluation_with_dataset/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/intros/LLMOps/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/intros/LangSmith/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/intros/Pricing/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/intros/Tracing_concept/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jonhpark7966.github.io/LangSmith_Course/practice/1_LangSmith_Tracing/</loc>
+         <lastmod>2024-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jonhpark7966.github.io/LangSmith_Course/practice/2_LangSmith_Evaluation/</loc>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tutorial/Datasets/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tutorial/Evaluation/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tutorial/Setup/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tutorial/Tracing_1/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tutorial/Tracing_2/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jonhpark7966.github.io/LangSmith_Course/tags/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
